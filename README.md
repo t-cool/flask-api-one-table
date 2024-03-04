@@ -1,11 +1,42 @@
 # Flask で作るシンプルな API
 
 
+## 説明
+
+データベースは、 [dict.db](./dict.db) です。
+
+表のスキームは、以下の通りです。
 
 ```
-http://localhost:5000/?word=hello
+CREATE TABLE dict (
+    level INTEGER,
+    en TEXT,
+    sound TEXT,
+    ja TEXT
+);
 ```
 
+データベース内のデータ構造は、以下の通りです。
+
 ```
-{"level": 1, "ja": "こんにちは，やあ", "sound": "ハロー"}
+level,en,sound,ja
+1,something,サムスィング,何か，あるもの
+1,also,オールソウ,もまた，さらに
+1,all,オール,すべての，全部の
+```
+
+次のリクエストに対して、
+
+```
+http://localhost:5000?word=something
+```
+
+以下のようなレスポンスを返します。
+
+```
+{
+  "level": 1,
+  "ja": "何か，あるもの",
+  "sound": "サムスィング"
+}
 ```
