@@ -1,5 +1,17 @@
 # Flask で作るシンプルな API
 
+## 利用法
+
+```
+pip install flask
+```
+
+```
+python server.py
+```
+
+ブラウザで http://localhost:5000/?word=hello のようにリクエストを送信します。
+
 
 ## 説明
 
