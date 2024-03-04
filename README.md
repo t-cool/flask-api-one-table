@@ -1,17 +1,26 @@
 # Flask で作るシンプルな API
 
-## 利用法
+## 準備・利用
 
+flask のインストール：
 ```
 pip install flask
 ```
 
+API サーバの起動: 
 ```
 python server.py
 ```
 
-ブラウザで http://localhost:5000/?word=hello のようにリクエストを送信します。
+API の利用
 
+ブラウザ: http://localhost:5000/?word=hello
+
+curl
+```
+% curl "http://localhost:5000/?word=hello"
+{"level": 1, "ja": "こんにちは，やあ", "sound": "ハロー"}
+```
 
 ## 説明
 
