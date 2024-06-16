@@ -1,4 +1,4 @@
-# Flask を活用した API 開発入門
+# Flask API 開発
 
 ## 準備・利用
 
